@@ -13,7 +13,7 @@ function list (req, res) {
     res.json({data: dishes})
 }
 
-const dishExists = (req, res, next) => {
+function dishExists (req, res, next) {
     const {dishId} = req.params
     const foundDish = dishes.find((dish) => dish.id == dishId);
     if(foundDish) {
